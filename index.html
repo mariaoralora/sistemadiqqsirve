@@ -478,13 +478,13 @@
       // Enviar a Google Sheets
       enviarRegistroAGoogleSheet(registro);
 
-      // Reiniciar selección
-      compra = [];
-      renderProductos();
-      actualizarTotal();
-      document.getElementById('nombreEstudiante').value = '';
-      document.getElementById('cursoEstudiante').value = '';
-      if (document.getElementById('cajaSelect')) document.getElementById('cajaSelect').value = '';
+  // Reiniciar selección (conservar la caja seleccionada)
+  compra = [];
+  renderProductos();
+  actualizarTotal();
+  document.getElementById('nombreEstudiante').value = '';
+  document.getElementById('cursoEstudiante').value = '';
+  // NOTA: no limpiamos document.getElementById('cajaSelect') para mantener la caja entre ventas
     }
 
     function actualizarHistorial() {
